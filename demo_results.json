@@ -1,0 +1,103 @@
+============================================================
+CodeRefinery Analysis Report
+============================================================
+
+SUMMARY
+--------------------
+Analyzed 2 Python files. Found 32 total issues. 3 high-severity issues require immediate attention.
+
+METRICS
+--------------------
+Files analyzed: 2
+Total issues: 32
+High severity: 3
+Complexity violations: 0
+
+FILE 1: sample_app.py
+-----------------------
+Style Issues:
+  Line   1: [F401] 'os' imported but unused
+           Suggestion: refer to PEP8 style guide
+  Line   2: [F401] 'sys' imported but unused
+           Suggestion: refer to PEP8 style guide
+  Line   4: [E302] expected 2 blank lines, found 1
+           Suggestion: refer to PEP8 style guide
+  Line   7: [E225] missing whitespace around operator
+           Suggestion: add spaces around operators
+  Line   8: [E225] missing whitespace around operator
+           Suggestion: add spaces around operators
+  Line   9: [E225] missing whitespace around operator
+           Suggestion: add spaces around operators
+  Line  19: [E302] expected 2 blank lines, found 1
+           Suggestion: refer to PEP8 style guide
+  Line  22: [W293] blank line contains whitespace
+           Suggestion: refer to PEP8 style guide
+  Line  25: [W293] blank line contains whitespace
+           Suggestion: refer to PEP8 style guide
+  Line  29: [E722] do not use bare 'except'
+           Suggestion: refer to PEP8 style guide
+  Line  32: [E302] expected 2 blank lines, found 1
+           Suggestion: refer to PEP8 style guide
+  Line  33: [W292] no newline at end of file
+           Suggestion: refer to PEP8 style guide
+  Line   1: [BLACK] code formatting can be improved
+           Suggestion: run black formatter
+Potential Bugs:
+  Line   4: [HIGH] Dangerous default value [] (mutable default argument)
+  Line  20: [HIGH] Dangerous default value {} (mutable default argument)
+  Line  29: [MEDIUM] Bare except clause - catches all exceptions including KeyboardInterrupt
+  Line  23: [HIGH] Use of eval() is dangerous and should be avoided
+Complexity Metrics:
+  process_data         (line   4): CCN = 5
+  __init__             (line  20): CCN = 1
+  unsafe_eval          (line  23): CCN = 1
+  process_with_exception (line  26): CCN = 2
+  risky_operation      (line  32): CCN = 1
+  Average CCN: 2.0
+
+FILE 2: utils.py
+------------------
+Style Issues:
+  Line   1: [E231] missing whitespace after ','
+           Suggestion: add space after comma
+  Line   1: [E231] missing whitespace after ':'
+           Suggestion: add space after comma
+  Line   3: [E302] expected 2 blank lines, found 1
+           Suggestion: refer to PEP8 style guide
+  Line   3: [E231] missing whitespace after ','
+           Suggestion: add space after comma
+  Line   3: [E231] missing whitespace after ','
+           Suggestion: add space after comma
+  Line   3: [E231] missing whitespace after ','
+           Suggestion: add space after comma
+  Line   3: [E231] missing whitespace after ','
+           Suggestion: add space after comma
+  Line   3: [E231] missing whitespace after ','
+           Suggestion: add space after comma
+  Line   3: [E231] missing whitespace after ','
+           Suggestion: add space after comma
+  Line   3: [E231] missing whitespace after ','
+           Suggestion: add space after comma
+  Line   3: [E231] missing whitespace after ','
+           Suggestion: add space after comma
+  Line   4: [E225] missing whitespace around operator
+           Suggestion: add spaces around operators
+  Line   7: [E302] expected 2 blank lines, found 1
+           Suggestion: refer to PEP8 style guide
+  Line   8: [W292] no newline at end of file
+           Suggestion: refer to PEP8 style guide
+  Line   1: [BLACK] code formatting can be improved
+           Suggestion: run black formatter
+Complexity Metrics:
+  add                  (line   1): CCN = 1
+  multiply             (line   3): CCN = 1
+  Average CCN: 1.0
+
+TOOL STATUS
+--------------------
+Tools not available: radon - using heuristic analysis
+
+EXPORTS
+--------------------
+- MARKDOWN report generated
+- JSON report generated

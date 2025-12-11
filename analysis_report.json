@@ -1,0 +1,168 @@
+{
+  "summary": "Analyzed 1 Python files. Found 8 total issues. 2 high-severity issues require immediate attention.",
+  "files": [
+    {
+      "path": "test_sample.py",
+      "language": "python",
+      "style_issues": [
+        {
+          "line": 3,
+          "code": "E225",
+          "message": "missing whitespace around operator",
+          "suggestion": "add spaces around operators"
+        },
+        {
+          "line": 4,
+          "code": "E225",
+          "message": "missing whitespace around operator",
+          "suggestion": "add spaces around operators"
+        },
+        {
+          "line": 5,
+          "code": "E225",
+          "message": "missing whitespace around operator",
+          "suggestion": "add spaces around operators"
+        },
+        {
+          "line": 15,
+          "code": "E302",
+          "message": "expected 2 blank lines, found 1",
+          "suggestion": "refer to PEP8 style guide"
+        },
+        {
+          "line": 16,
+          "code": "W292",
+          "message": "no newline at end of file",
+          "suggestion": "refer to PEP8 style guide"
+        },
+        {
+          "line": 1,
+          "code": "BLACK",
+          "message": "code formatting can be improved",
+          "suggestion": "run black formatter"
+        }
+      ],
+      "complexity": {
+        "function_metrics": [
+          {
+            "name": "bad_function",
+            "ccn": 5,
+            "lineno": 1
+          },
+          {
+            "name": "unsafe_eval",
+            "ccn": 1,
+            "lineno": 15
+          }
+        ],
+        "avg_ccn": 3.0
+      },
+      "bugs": [
+        {
+          "line": 1,
+          "message": "Dangerous default value [] (mutable default argument)",
+          "severity": "high"
+        },
+        {
+          "line": 15,
+          "message": "Use of eval() is dangerous and should be avoided",
+          "severity": "high"
+        }
+      ],
+      "before_snippet": "def bad_function(items, results=[]):\n    for i in items:\n        if i>10:\n            if i>20:\n                if i>30:\n                    results.append(i*2)\n                else:\n                    results.append(i)\n            else:\n                results.append(i/2)\n        else:\n            results.append(0)\n    return results\n\ndef unsafe_eval(user_input):\n    return eval(user_input)",
+      "after_snippet": "def bad_function(items, results=[]):\n    for i in items:\n        if i>10:\n            if i>20:\n                if i>30:\n                    results.append(i*2)\n                else:\n                    results.append(i)\n            else:\n                results.append(i/2)\n        else:\n            results.append(0)\n    return results\n\ndef unsafe_eval(user_input):\n    return eval(user_input)",
+      "patch": null
+    }
+  ],
+  "overall_metrics": {
+    "total_issues": 8,
+    "high_severity": 2,
+    "files_analyzed": 1
+  },
+  "export": {
+    "markdown": "# CodeRefinery Analysis Report\n\n## Summary\nAnalyzed 1 Python files. Found 8 total issues. 2 high-severity issues require immediate attention.\n\n## Overall Metrics\n- Files analyzed: 1\n- Total issues: 8\n- High severity issues: 2\n- Complexity violations: 0\n\n## File: test_sample.py\n### Style Issues (6)\n- Line 3: missing whitespace around operator (E225)\n- Line 4: missing whitespace around operator (E225)\n- Line 5: missing whitespace around operator (E225)\n- Line 15: expected 2 blank lines, found 1 (E302)\n- Line 16: no newline at end of file (W292)\n- Line 1: code formatting can be improved (BLACK)\n\n### Potential Bugs (2)\n- Line 1: Dangerous default value [] (mutable default argument) [high]\n- Line 15: Use of eval() is dangerous and should be avoided [high]\n\n### Complexity Metrics\n- bad_function (line 1): CCN = 5\n- unsafe_eval (line 15): CCN = 1\n- Average CCN: 3.0\n\n\n---\n*Note: Tools not available: radon - using heuristic analysis*",
+    "json": {
+      "summary": "Analyzed 1 Python files. Found 8 total issues. 2 high-severity issues require immediate attention.",
+      "files": [
+        {
+          "path": "test_sample.py",
+          "language": "python",
+          "style_issues": [
+            {
+              "line": 3,
+              "code": "E225",
+              "message": "missing whitespace around operator",
+              "suggestion": "add spaces around operators"
+            },
+            {
+              "line": 4,
+              "code": "E225",
+              "message": "missing whitespace around operator",
+              "suggestion": "add spaces around operators"
+            },
+            {
+              "line": 5,
+              "code": "E225",
+              "message": "missing whitespace around operator",
+              "suggestion": "add spaces around operators"
+            },
+            {
+              "line": 15,
+              "code": "E302",
+              "message": "expected 2 blank lines, found 1",
+              "suggestion": "refer to PEP8 style guide"
+            },
+            {
+              "line": 16,
+              "code": "W292",
+              "message": "no newline at end of file",
+              "suggestion": "refer to PEP8 style guide"
+            },
+            {
+              "line": 1,
+              "code": "BLACK",
+              "message": "code formatting can be improved",
+              "suggestion": "run black formatter"
+            }
+          ],
+          "complexity": {
+            "function_metrics": [
+              {
+                "name": "bad_function",
+                "ccn": 5,
+                "lineno": 1
+              },
+              {
+                "name": "unsafe_eval",
+                "ccn": 1,
+                "lineno": 15
+              }
+            ],
+            "avg_ccn": 3.0
+          },
+          "bugs": [
+            {
+              "line": 1,
+              "message": "Dangerous default value [] (mutable default argument)",
+              "severity": "high"
+            },
+            {
+              "line": 15,
+              "message": "Use of eval() is dangerous and should be avoided",
+              "severity": "high"
+            }
+          ],
+          "before_snippet": "def bad_function(items, results=[]):\n    for i in items:\n        if i>10:\n            if i>20:\n                if i>30:\n                    results.append(i*2)\n                else:\n                    results.append(i)\n            else:\n                results.append(i/2)\n        else:\n            results.append(0)\n    return results\n\ndef unsafe_eval(user_input):\n    return eval(user_input)",
+          "after_snippet": "def bad_function(items, results=[]):\n    for i in items:\n        if i>10:\n            if i>20:\n                if i>30:\n                    results.append(i*2)\n                else:\n                    results.append(i)\n            else:\n                results.append(i/2)\n        else:\n            results.append(0)\n    return results\n\ndef unsafe_eval(user_input):\n    return eval(user_input)",
+          "patch": null
+        }
+      ],
+      "overall_metrics": {
+        "total_issues": 8,
+        "high_severity": 2,
+        "files_analyzed": 1
+      },
+      "export": {}
+    }
+  }
+}

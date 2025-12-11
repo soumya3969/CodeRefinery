@@ -1,0 +1,19 @@
+{
+  "files": [
+    {
+      "path": "sample_app.py",
+      "language": "python",
+      "content": "import os\nimport sys\n\ndef process_data(items, results=[]):\n    \"\"\"Process data items.\"\"\"\n    for item in items:\n        if item>10:\n            if item>20:\n                if item>30:\n                    results.append(item*2)\n                else:\n                    results.append(item)\n            else:\n                results.append(item/2)\n        else:\n            results.append(0)\n    return results\n\nclass DataProcessor:\n    def __init__(self, config={}):\n        self.config = config\n    \n    def unsafe_eval(self, expression):\n        return eval(expression)\n    \n    def process_with_exception(self):\n        try:\n            risky_operation()\n        except:\n            pass\n\ndef risky_operation():\n    pass"
+    },
+    {
+      "path": "utils.py", 
+      "language": "python",
+      "content": "def add(a,b):return a+b\n\ndef multiply(x,y,z,a,b,c,d,e,f):\n    result=x*y*z*a*b*c*d*e*f\n    return result\n\nclass Helper:\n    pass"
+    }
+  ],
+  "options": {
+    "apply_black": false,
+    "max_complexity_threshold": 8,
+    "export_formats": ["markdown", "json"]
+  }
+}
